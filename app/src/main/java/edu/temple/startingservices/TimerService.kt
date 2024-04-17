@@ -17,15 +17,16 @@ class TimerService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        runTimer()
+        runTimer(intent?.getIntExtra(timerTimeKey,10))
         return super.onStartCommand(intent, flags, startId)
     }
-    fun runTimer(time : Int){
+    fun runTimer(time : Int?){
         CoroutineScope(Job() + Dispatchers.Default).launch{
-            repeat(time){
+            repeat(time!!){
                 Log.d("Countdown","${time-it}")
                 delay(1000)
             }
+            stopSelf()
         }
     }
 }
