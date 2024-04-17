@@ -8,22 +8,22 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/startTimerBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start Timer"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText"
-        app:layout_constraintStart_toStartOf="@+id/editTextText" />
+        app:layout_constraintEnd_toEndOf="@+id/timeEditText"
+        app:layout_constraintStart_toStartOf="@+id/timeEditText" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/timeEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberSigned"
         android:text="Enter the amount of seconds for timer to run:"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/startTimerBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
